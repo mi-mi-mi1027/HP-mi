@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盈のホームページ</title>
+    <link rel="stylesheet" href="css/pc.css" type="text/css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+</head>
+<body>
+<header class="site-header">
+        <div id="logo"></div>
+        <img src="common/logo.png" width="100" hegiht="37" aly="盈ロゴ">
+        <div class="site-title">盈のホームページ</div>
+    <nav id="gNavi">
+        <ul>
+            <li><a href="#about"><img src="common/navi1.png" width="192" height="53" alt="案内"></a></li>
+            <li><a href="#gallery"><img src="common/navi2.png" width="192" height="53" alt="ギャラリー"></a></li>
+            <li><a href="#commission"><img src="common/navi3.png" width="192" height="53" alt="コミッション"></a></li>
+            <li><a href="#sns"><img src="common/navi4.png" width="192" height="53" alt="SNS"></a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div id="mainPhoto">
+        <img src="common/main.png" width="100%" height="auto" alt="表紙">
+    </div>
+    <section id="about">
+    <h2>ABOUT</h2>
+    <p>SDイラストを描かせていただける方を募集しております。</p>
+    </section>
+    <section id="gallery">
+        <h2>GALLERY</h2>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="common/CM1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="common/CM2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="common/CM3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="common/sample1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="common/sample2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="common/sample3.jpg" alt=""></div>
+            </div>
+
+            <!--ページネーション（下の丸）-->
+            <div class="swiper-pagination"></div>
+            <!--矢印-->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <section id="commission">
+        <h2>COMMISSION</h2>
+        <p>ご依頼はskebより承っています。</p>
+        <p>動画投稿や挨拶画像にもご使用いただけるよう、背景透過イラストもご提供可能です。</p>
+        <a href="https://skeb.jp/@qimipFNL" id="skeb-link">https://skeb.jp/@qimipFNL</a>
+    </section>
+    <section id="sns">
+        <h2>SNS</h2>
+        <a href="https://x.com/qimipFNL?s=20" id="snslink"><img src="common/icon.jpg" width="150" height="150" class="sns-icon">X(Twitter)</a>
+    </section>
+</main>
+    
+<footer class="site-footer">
+    <p>作品の無断転載・無断使用・AI学習は全面禁止です。</p>
+</footer>
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    centeredSlides: true,
+    slidesPerView:'auto',
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+});
+</script>
+
+</html>
