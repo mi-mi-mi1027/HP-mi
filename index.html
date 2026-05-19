@@ -74,9 +74,22 @@
     <p>作品の無断転載・無断使用・AI学習は全面禁止です。</p>
 </footer>
 
-
-
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="common/js/lightbox.min.js"></script>
+<script>
+//スマホハンバーガーメニュー
+(function($) {
+    $(function () {
+        $('#nav-toggle').on('click', function() {
+            $('body').toggleClass('open');
+        });
+        $('#gNavi a,#gNavi img').on('click', function() {
+            $('body').toggleClass('open');
+        });
+    });
+})(jQuery);
+</script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper('.swiper', {
