@@ -7,7 +7,8 @@
       <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/pc.css" type="text/css">  
     <link rel="stylesheet" href="css/sp.css" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css">
+
 
 </head>
 <body>
@@ -84,7 +85,7 @@
         $('#nav-toggle').on('click', function() {
             $('body').toggleClass('open');
         });
-        $('#gNavi a,#gNavi img').on('click', function() {
+        $('#gNavi').on('click', function() {
             $('body').toggleClass('open');
         });
     });
