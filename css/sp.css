@@ -1,5 +1,9 @@
     @media screen and (max-width: 736px){
-      
+    
+    p {
+        font-size: 16px;
+    }
+        
     .pc {display: none;}
 
     html {
@@ -82,10 +86,10 @@
     #nav-toggle {
         width: 30px;
         height: 25px;
-        position: absolute;
+        position: fixed;
         top: 15px;
-        right: 5px;
-        z-index: 1000;
+        right: 15px;
+        z-index: 2000;
     }
 
     #nav-toggle>div {
