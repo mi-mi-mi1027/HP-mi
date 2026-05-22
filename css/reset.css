@@ -15,4 +15,5 @@ p {
 h2 {
     font-family: BIZ UD明朝;
     color: #4b5b6a;
+    letter-spacing: 0.2em !important;
 }

@@ -132,6 +132,12 @@ section h2 {
     background: #ffcc12;
 }
 
+.gallery-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 #skeb-link {
     display: block;
     text-align: center;
@@ -170,4 +176,104 @@ footer p {
     text-align: center;
     margin: auto;
     color: #fff;
+}
+
+/*GALLERYページ*/
+
+.page-title {
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    font-size: 60px;
+    padding-right: 180px;
+}
+
+#logo-gallery {
+    padding-left: 29px;
+}
+
+#top-back {
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2000;
+    display: inline-block;
+    color: #fff;
+    background-color: #ffcc12;
+    border-radius: 50px;
+    position: absolute
+}
+
+#top-back a {
+    display: flex;
+    color: #fff;
+    margin-top: 9px;
+    padding-left: 7px;
+}
+
+.square-grid img:hover {
+    transform: scale(1.2);
+}
+
+.square-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);/*横4列*/
+    gap: 20px; /*画像の間隔*/
+    max-width: 990px;
+    margin: 0 auto;
+}
+.square-grid a {
+    display: block;
+}
+.square-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.grid-l img:hover {
+    transform: scale(1.2);
+}
+
+.grid-l {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.grid-l a {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-l img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+}
+
+.grid-v img:hover {
+    transform: scale(1.2);
+}
+
+.grid-v {
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    gap: 20px;
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.grid-v a {
+   display: block;
+}
+.grid-v img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }

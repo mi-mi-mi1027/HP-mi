@@ -132,4 +132,15 @@
         margin: 0 auto;
     }
 
+    #skeb-link {
+        font-size: 1em;
+    }
+/*GALLERYのCSS*/
+
+    .page-title {
+        font-size: 40px;
+        padding: 0;
+    }
+
+
     }
