@@ -133,9 +133,25 @@ section h2 {
 }
 
 .gallery-link {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    text-decoration: none;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    background-color: #ffcc12;
+}
+
+a.gallery-link {
+    border-radius:100vh
+}
+
+.gallery-link {
+    transition: 0.3s;
+}
+
+.gallery-link:hover {
+    transform: scale(1.3);
 }
 
 #skeb-link {
