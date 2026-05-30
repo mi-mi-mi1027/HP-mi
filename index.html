@@ -37,11 +37,11 @@
         <img src="common/main.png" width="100%" height="auto" alt="表紙">
     </div>
     <section id="about">
-    <h2>ABOUT</h2>
+    <h2 class="fade-text">ABOUT</h2>
     <p>盈（み）です。<br>OC・版権のSDイラストを描いています。</p>
     </section>
     <section id="gallery">
-        <h2>GALLERY</h2>
+        <h2 class="fade-text">GALLERY</h2>
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="common/CM1.png" alt=""></div>
@@ -61,14 +61,14 @@
             <a class=gallery-link href="gallery.html">もっと見る</a>
     </section>
     <section id="commission">
-        <h2>COMMISSION</h2>
+        <h2 class="fade-text">COMMISSION</h2>
         <p>ご依頼はskebより承っています。</p>
         <p>背景透過イラストも対応可能です。(アイコン・動画素材などにお使いいただけます)</p>
         <p>興味のある方はぜひご覧ください。</p>
         <a href="https://skeb.jp/@qimipFNL" id="skeb-link">https://skeb.jp/@qimipFNL</a>
     </section>
     <section id="sns">
-        <h2>SNS</h2>
+        <h2 class="fade-text">SNS</h2>
         <a href="https://x.com/qimipFNL?s=20" id="snslink"><img src="common/icon.jpg" width="150" height="150" class="sns-icon">X(Twitter)</a>
     </section>
 </main>
@@ -109,6 +109,23 @@
       prevEl: '.swiper-button-prev',
     },
 });
+
+//　▼文字を一文字ずつ分割
+document.querySelectorAll('.fade-text').forEach(text => {
+    const chars = text.textContent.trim().split('');
+    text.innerHTML = chars.map(c => `<span>${c}</span>`).join('');
+});
+// 文字のfade-up
+const fadeTexts = document.querySelectorAll('.fade-text');
+
+const observer2 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+fadeTexts.forEach(el => observer2.observe(el));
 </script>
 
 </html>

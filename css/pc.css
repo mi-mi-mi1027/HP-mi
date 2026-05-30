@@ -136,6 +136,7 @@ section h2 {
     text-decoration: none;
     display: block;
     width: max-content;
+    margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
     color: #fff;
@@ -223,6 +224,11 @@ footer p {
     position: absolute
 }
 
+#top-back:hover {
+    transform: scale(1.5);
+    transition: 0.4s;
+}
+
 #top-back a {
     display: flex;
     color: #fff;
@@ -293,3 +299,33 @@ footer p {
     height: auto;
     object-fit: cover;
 }
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-text span {
+    opacity: 0;
+    transform: translateY(20px);
+    display: inline-block;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-text.show span {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-text.show span:nth-child(1) {transition-delay: 0.05s;}
+.fade-text.show span:nth-child(2) {transition-delay: 0.10s;}
+.fade-text.show span:nth-child(3) {transition-delay: 0.15s;}
+.fade-text.show span:nth-child(4) {transition-delay: 0.20s;}
+.fade-text.show span:nth-child(5) {transition-delay: 0.25s;}
+.fade-text.show span:nth-child(6) {transition-delay: 0.30s;}
+.fade-text.show span:nth-child(7) {transition-delay: 0.35s;}
+.fade-text.show span:nth-child(8) {transition-delay: 0.40s;}
+.fade-text.show span:nth-child(9) {transition-delay: 0.45s;}
