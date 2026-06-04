@@ -58,7 +58,7 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
-            <a class=gallery-link href="gallery.html">もっと見る</a>
+            <a class="gallery-link" href="gallery.html">もっと見る</a>
     </section>
     <section id="commission">
         <h2 class="fade-text">COMMISSION</h2>
@@ -76,10 +76,14 @@
 <footer class="site-footer">
     <p>作品の無断転載・無断使用・AI学習は全面禁止です。</p>
 </footer>
+<div class="transition-effect">
+    <img src="common/icon2.png" class="transition-icon">
+</div>
 
-</body>
+
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="common/js/lightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
 //スマホハンバーガーメニュー
 (function($) {
@@ -92,9 +96,9 @@
         });
     });
 })(jQuery);
-</script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
+
+
+
   const swiper = new Swiper('.swiper', {
     loop: true,
     centeredSlides: true,
@@ -126,6 +130,24 @@ const observer2 = new IntersectionObserver(entries => {
     });
 });
 fadeTexts.forEach(el => observer2.observe(el));
+
+const link = document.querySelector('.gallery-link');
+const effect = document.querySelector('.transition-effect');
+
+link.addEventListener('click', function(e) {
+    e.preventDefault();
+    effect.classList.add('active');
+
+    setTimeout(() => {
+        effect.classList.add('fade-out');
+    }, 1000);
+
+    setTimeout(() => {
+        window.location.href = this.href;
+    }, 900); // アニメーションと合わせる
+});
 </script>
+</body>
+
 
 </html>

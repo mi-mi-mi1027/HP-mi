@@ -125,6 +125,25 @@
         top: 15px;
         transform: rotate(-45deg);
     }
+
+    body {
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #7d7d7d 0,
+            #7d7d7d 50px,
+            transparent 51px,
+            transparent -10px
+        ) left top / 35px 100% repeat-y,
+        repeating-linear-gradient(
+            -45deg,
+            #7d7d7d 0,
+            #7d7d7d 50px,
+            transparent 51px,
+            transparent -10px
+        ) right top / 35px 100% repeat-y,
+        #fff;
+}
    
     .swiper {
         width: 100%;
