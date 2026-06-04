@@ -10,10 +10,14 @@ p {
     font-family: BIZ UD明朝;
     color: #4b5b6a;
     text-align: center;
+    text-shadow: 
+    0px 0px 5px rgb(255, 255, 255);
 }
 
 h2 {
     font-family: BIZ UD明朝;
     color: #4b5b6a;
     letter-spacing: 0.2em !important;
+   text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.3);
 }
