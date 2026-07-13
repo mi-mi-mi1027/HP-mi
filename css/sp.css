@@ -201,10 +201,15 @@ a.gallery-link {
 
 /*GALLERYのCSS*/
 
-    .page-title {
+.page-title {
         font-size: 40px;
         padding: 0;
     }
 
+.grid-g img {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+}
 
     }
