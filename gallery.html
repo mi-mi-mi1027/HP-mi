@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>盈のギャラリー</title>
+    <link href="css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/pc.css" type="text/css">  
-    <link rel="stylesheet" href="css/sp.css" type="text/css">
+    <link rel="stylesheet" href="css/sp.css" type="text/css"> 
+
 </head>
 <body>
     <header class="site-header">
@@ -22,14 +24,14 @@
         <section id="square">
             <h2 class="fade-text">Square</h2>
             <div class="square-grid">
-                <a><img class="fade-up" src="common/CM1.png" alt="コミッション1" width="152" height="152"></a>
-                <a><img class="fade-up" src="common/CM2.png" alt="コミッション2" width="152" height="152"></a>
-                <a><img class="fade-up" src="common/CM3.png" alt="コミッション3" width="152" height="152"></a>
-                <a><img class="fade-up" src="common/sample1.png" alt="サンプル1" width="152" height="152"></a>
-                <a><img class="fade-up" src="common/sample2.png" alt="サンプル2" width="152" height="152"></a>
-                <a><img class="fade-up" src="common/sample3.png" alt="サンプル3" width="152" height="152"></a>
-                <a><img class="fade-up" src="common/sample4.png" alt="サンプル4" width="152" height="152"></a>
-                <a><img class="fade-up" src="common/sample7.png" alt="サンプル7" width="152" height="152"></a>
+                <a href="common/CM1.png" data-lightbox="gallery" data-title="コミッション1"><img class="fade-up" src="common/CM1.png" alt="コミッション1" width="152" height="152"></a>
+                <a href="common/CM2.png" data-lightbox="gallery" data-title="コミッション2"><img class="fade-up" src="common/CM2.png" alt="コミッション2" width="152" height="152"></a>
+                <a href="common/CM3.png" data-lightbox="gallery" data-title="コミッション3"><img class="fade-up" src="common/CM3.png" alt="コミッション3" width="152" height="152"></a>
+                <a href="common/sample1.png" data-lightbox="gallery" data-title="サンプル"><img class="fade-up" src="common/sample1.png" alt="サンプル1" width="152" height="152"></a>
+                <a href="common/sample2.png" data-lightbox="gallery" data-title="サンプル"><img class="fade-up" src="common/sample2.png" alt="サンプル2" width="152" height="152"></a>
+                <a href="common/sample9.png" data-lightbox="gallery" data-title="サンプル"><img class="fade-up" src="common/sample9.png" alt="サンプル3" width="152" height="152"></a>
+                <a href="common/sample4.png" data-lightbox="gallery" data-title="サンプル"><img class="fade-up" src="common/sample4.png" alt="サンプル4" width="152" height="152"></a>
+                <a href="common/sample7.png" data-lightbox="gallery" data-title="サンプル"><img class="fade-up" src="common/sample7.png" alt="サンプル7" width="152" height="152"></a>
             </div>
         </section>
 
@@ -51,8 +53,22 @@
                 <a><img class="fade-up" src="common/vati3.png" alt=""></a>
             </div>
         </section>
+
+        <section id="Gif">
+            <h2 class="fade-text">Gif Animation</h2>
+            <div class="grid-g">
+                <a><img class="fade-up" src="gif/S__112689159.gif" alt=""></a>
+                <a><img class="fade-up" src="gif/S__112689158.gif" alt=""></a>
+                <a><img class="fade-up" src="gif/S__112689160.gif" alt=""></a>
+            </div>
+
+        </section>
     </main>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="common/js/lightbox.min.js"></script>
 <script>
+    $(function () {
     //　▼画像のfade-up
 const fadeUps = document.querySelectorAll( '.fade-up');
 
@@ -81,6 +97,13 @@ const observer2 = new IntersectionObserver(entries => {
     });
 });
 fadeTexts.forEach(el => observer2.observe(el));
+
+  // Lightboxのオプション設定
+  lightbox.option({
+    'wrapAround': true, // 最後まで見たあと最初に戻る
+    'alwaysShowNavOnTouchDevices': true //スマホでも操作用の矢印を常に表示
+  });
+})
 </script>
 
 
