@@ -212,4 +212,15 @@ a.gallery-link {
     object-fit: cover;
 }
 
+.header-video {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.header-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     }
+}
